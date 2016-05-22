@@ -1,0 +1,14 @@
+doctype html
+html
+    meta(http-equiv='content-type', content='text/html; charset=UTF-8')
+    head
+        title Socket.IO Chat Demo
+        link(href="/static/css/reset.css" rel="styleSheet")
+        link(href="/static/css/index.css" rel="styleSheet")
+    body
+        ul#messages
+        form#sendMessage(action='javascript:;')
+            input(type="text",autocomplete='off',required)
+            button(type="submit") Send
+        script(src="/static/js/lib/socket.io-1.2.0.js")
+        script(src="/static/js/client.js")

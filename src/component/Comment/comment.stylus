@@ -1,0 +1,28 @@
+base-transition-cubic-bezier= cubic-bezier(.645,.045,.355,1)
+
+.chat-comment-body
+  height 55px
+
+.sendMessage
+  width 100%
+  padding 10px
+  background #e6e6e6
+
+  input
+    padding 1rem
+    width 90%
+    margin-right .5%
+    border 1px solid #d9d9d9
+    border-radius base-border-radius
+    transition all .2s base-transition-cubic-bezier 0s
+
+    &:focus
+      border-color #57c5f7
+
+  button
+    width 9%
+    background rgb(130, 224, 255)
+    cursor pointer
+    border none
+    border-radius base-border-radius
+    padding 1rem

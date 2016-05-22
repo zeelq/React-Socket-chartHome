@@ -1,0 +1,96 @@
+base-transition-cubic-bezier= cubic-bezier(.645,.045,.355,1)
+base-border-radius=.3rem
+mine-chat-list-bg-color=#fff
+others-chat-list-bg-color=#fff
+
+
+.chat
+  flex 1
+  height 100%
+  overflow-y auto
+  -webkit-overflow-scrolling touch
+  background rgba(101, 98, 98, 0.88)
+  padding 0 1rem
+
+.chat-list
+  list-style-type none
+  margin 0
+  padding 0 1rem
+
+.chat-list-item
+    margin 1.5rem 0
+
+    .chat-avatar
+      float left
+      cursor pointer
+
+    .chat-avatar-img
+      width 4.5rem
+      height 4.5rem
+      border-radius 50%
+      
+    .chat-body
+      position relative
+      font-size 1.2rem
+      padding 1rem 1.5rem
+      border .1rem solid #f1f5fc
+      box-shadow 0 1px 1px rgba(0,0,0,.05)
+      
+      &:before
+        position absolute
+        top 10px
+        display inline-block
+        background #fff
+        width 16px
+        height 16px
+
+        content ''
+        transform rotate(-45deg)
+        -webkit-transform rotate(-45deg)
+        -moz-transform rotate(-45deg)
+        -ms-transform rotate(-45deg)
+        -o-transform rotate(-45deg)
+
+      .chat-header
+        padding-bottom .5rem
+        border-bottom .1rem solid #f1f5fc
+
+      .chat-name
+        color #3c8dbc
+
+      .chat-time
+        float right
+        margin-right 1rem
+        color #777
+
+      .chat-detail
+        padding  .6rem
+        line-height 2
+
+  & .chat-mine
+
+    .chat-body
+      margin-left 6.5rem
+      background-color mine-chat-list-bg-color
+
+      &:before
+        border-top 1px solid #f1f5fc
+        border-left 1px solid #f1f5fc
+        left -8px
+
+      .chat-avatar
+        float left
+
+  & .chat-others
+
+    .chat-body
+      margin-right 6.5rem
+      background-color others-chat-list-bg-color
+
+      &:before
+        border-bottom  1px solid #f1f5fc
+        border-right  1px solid #f1f5fc
+        right  -8px
+
+    .chat-avatar
+      float right
